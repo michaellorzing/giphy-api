@@ -1,0 +1,39 @@
+body{
+  background-image: url("background.jpg");
+}
+
+label {
+  font-size: 24px;
+  color: white;
+}
+
+.btn  {
+  background: purple;
+}
+
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  color: #333;
+  font-size: 16px;
+}
+
+.left-column {
+  flex: 1;
+  color: #fff;
+  min-height:100vh;
+  padding: 25px;
+  box-shadow: 0 0 5px #222;
+  position: relative;
+  z-index: 999;
+}
+
+#search-cont  {
+  justify-content: center;
+}
+ 
+#gifDisplay {
+  margin-top: 80px;
+  border: white solid 4px;
+}
