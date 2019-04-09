@@ -1,8 +1,8 @@
 var $searchInput = ""
 var gifArray = ["Michael Jordan", "Kobe Bryant", "Ray Lewis", "Wayne Gretzky", "Tiger Woods", "Peyton Manning", "Drew Brees", "Derek Jeter"]
 var apiKey = "NiZ8WIuEMsu0QheTz5m2ToaQ8v17Somq"
-console.log(gifArray);
-console.log($searchInput);
+// // console.log(gifArray);
+// console.log($searchInput);
 
 
 
@@ -10,7 +10,7 @@ console.log($searchInput);
 $(document).ready(function () {
 
 //create a form that takes new search items and adds them to the array
-
+// function  performSearch(){
   var $searchButton = $("#search-button");
   var $searchInput = $("#search-input");
   $searchButton.on("click", function (event) {
@@ -23,6 +23,7 @@ $(document).ready(function () {
       makeButtons();
     }
   })
+// } 
 
   function makeButtons() {
     $("#button-pool").empty();
@@ -36,7 +37,7 @@ $(document).ready(function () {
   }
 
   makeButtons();
-  pause();
+  // pause();
 
   
 
@@ -56,11 +57,12 @@ $(document).ready(function () {
         console.log(response);
         for (var i = 0; i < results.length; i++) {
           if (results[i].rating !== "r") {
+            console.log(results[i])
             var gifDiv = $("<div>");
             var rating = results[i].rating;
             var p = $("<p>").text("Rating: " + rating);
             var sportsGif = $("<img>");
-            sportsGif.attr("src", results[i].images.fixed_width_downsampled.url);
+            sportsGif.attr("src", results[i].images.downsized.url);
             console.log(sportsGif);
             gifDiv.append(sportsGif);
             $("#gifDisplay").prepend(gifDiv);
@@ -69,7 +71,7 @@ $(document).ready(function () {
       })
 
   })
-  function pause(){
+  
   $(".gif").on("click", function () {
 
     var state = $(this).attr("data-state");
@@ -82,5 +84,5 @@ $(document).ready(function () {
       $(this).attr("data-state", "still");
     }
   });
-  }
+  
 })
