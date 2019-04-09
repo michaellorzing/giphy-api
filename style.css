@@ -1,10 +1,14 @@
 body{
-  background-image: url("background.jpg");
+  background-image: url("cool.png");
+   background-position: right top;
+  /* background-repeat: no-repeat; */
+
 }
 
 label {
   font-size: 24px;
   color: white;
+  font-weight: bold;
 }
 
 .btn  {
@@ -20,13 +24,18 @@ label {
 }
 
 .left-column {
-  flex: 1;
+  flex: 4;
   color: #fff;
   min-height:100vh;
   padding: 25px;
-  box-shadow: 0 0 5px #222;
+  box-shadow: 0 0 5px white;
   position: relative;
-  z-index: 999;
+  /* z-index: 999; */
+  background-image: linear-gradient(red, blue, violet, pink);
+}
+
+#searchInput{
+  margin-top: 120px;
 }
 
 #search-cont  {
@@ -34,6 +43,7 @@ label {
 }
  
 #gifDisplay {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   border: white solid 4px;
+  background-image: linear-gradient(red, blue, violet, pink);
 }
